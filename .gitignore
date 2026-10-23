@@ -1,4 +1,5 @@
 # Python / uv
+.venv
 .venv/
 .venv.nosync/
 __pycache__/
