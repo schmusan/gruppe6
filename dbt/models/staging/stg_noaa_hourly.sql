@@ -33,8 +33,7 @@ typed as (
         nullif(rel_humidity_pct, -99)                           as rel_humidity_pct,
         nullif(precip_mm_h, -99)                                as precip_mm_h,
 
-        source_file,
-        downloaded_at_utc
+        source_file
     from source
 
 ),

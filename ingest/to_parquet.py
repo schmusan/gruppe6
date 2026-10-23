@@ -22,7 +22,6 @@ Aufruf
 
 from __future__ import annotations
 
-import csv
 from pathlib import Path
 
 import pandas as pd
@@ -46,26 +45,22 @@ DTYPES = {
 }
 
 
-def read_manifest() -> dict[str, str]:
-    """Datei → Download-Zeitpunkt, für die Lineage-Spalte ``downloaded_at_utc``."""
-    with (RAW_DIR / "_manifest.csv").open(newline="") as fh:
-        return {Path(r["file"]).name: r["downloaded_at_utc"] for r in csv.DictReader(fh)}
-
-
-def convert_site(site_dir: Path, downloaded: dict[str, str]) -> pd.DataFrame:
+def convert_site(site_dir: Path) -> pd.DataFrame:
     frames = []
     for path in sorted(site_dir.glob("met_*_hour_*.txt")):
         df = pd.read_csv(path, sep=r"\s+", header=None, names=COLUMNS, dtype=DTYPES, engine="c")
+        # Lineage: Herkunftsdatei pro Zeile. Download-Datum und Hash stehen im
+        # Manifest (data/raw/noaa/_manifest.csv), nicht hier: So bleibt die
+        # Parquet-Datei bei unveränderten Daten byte-gleich, auch nach einem
+        # erneuten Download, und erzeugt in git keine unnötigen Änderungen.
         df["source_file"] = path.name
-        df["downloaded_at_utc"] = downloaded.get(path.name)
         frames.append(df)
     return pd.concat(frames, ignore_index=True)
 
 
 def main() -> int:
-    downloaded = read_manifest()
     for site_dir in sorted(p for p in RAW_DIR.iterdir() if p.is_dir()):
-        df = convert_site(site_dir, downloaded)
+        df = convert_site(site_dir)
         target = OUT_DIR / f"site={site_dir.name}" / "data.parquet"
         target.parent.mkdir(parents=True, exist_ok=True)
         df.to_parquet(target, index=False, compression="zstd")
