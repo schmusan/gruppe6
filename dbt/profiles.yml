@@ -1,0 +1,8 @@
+# Lokales DuckDB-Profil. Die Datenbankdatei liegt im Repo-Root.
+polar:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../polar.duckdb"
+      threads: 4

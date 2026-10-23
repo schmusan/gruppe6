@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: noaa
+    description: >
+      Stündliche Meteorologie-Daten der NOAA-GML-Observatorien, unverändert aus
+      dem Rohtext nach Parquet konvertiert (ingest/to_parquet.py).
+      Quelle: https://gml.noaa.gov/aftp/data/meteorology/in-situ/
+    meta:
+      owner: NOAA Global Monitoring Laboratory
+      license: frei verfügbar, Zitierung mit Station, Feldern, Zeitraum und Download-Datum
+      timezone: UTC
+      grain: eine Zeile = eine Station × eine Stunde
+    tables:
+      - name: hourly
+        meta:
+          external_location: "read_parquet('../data/parquet/noaa_hourly/*/data.parquet', hive_partitioning = false)"
+        description: Rohwerte inklusive Fehlcodes (-999, -999.9, -99.9, -9, -999.90, -99).
+        columns:
+          - name: site_code
+            tests: [not_null]
+          - name: temp_2m_c
+            description: Temperatur auf 2 m in °C, Fehlcode -999.9

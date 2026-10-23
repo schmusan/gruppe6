@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_noaa_hourly
+    description: >
+      Bereinigte Stundenwerte, Grain eine Station × eine Stunde (UTC).
+      Fehlcodes sind NULL, unplausible Werte ebenfalls, Duplikate entfernt.
+    columns:
+      - name: site_code
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['BRW', 'SUM', 'SPO']
+      - name: observed_at_utc
+        description: Beginn der Messstunde in UTC (Stunde 05 = 05:00–05:59).
+        tests: [not_null]
+      - name: temp_2m_c
+        description: Temperatur auf 2 m in °C, NULL wenn fehlend oder unplausibel.
+
+seeds:
+  - name: stations
+    description: Stammdaten der drei Stationen (Name, Region, Hemisphäre).
+    columns:
+      - name: site_code
+        tests: [unique, not_null]

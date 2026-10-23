@@ -1,0 +1,28 @@
+# Python / uv
+.venv/
+.venv.nosync/
+__pycache__/
+*.pyc
+
+# macOS / iCloud
+.DS_Store
+
+# dbt-Artefakte
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+dbt/.user.yml
+logs/
+
+# Datenbank wird von dbt build aus den Parquet-Dateien neu erzeugt
+polar.duckdb
+polar.duckdb.wal
+
+# NOAA-Rohtext (ca. 75 MB): wird von ingest/noaa.py neu geladen.
+# Versioniert werden Manifest (Hash + Download-Datum) und die Parquet-Dateien.
+data/raw/noaa/*/*.txt
+data/raw/noaa/*/*.part
+data/raw/noaa/_ingest.log
+
+# marimo
+__marimo__/

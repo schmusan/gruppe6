@@ -1,0 +1,34 @@
+# dbt-Projekt der Gruppe 6: Polar-Wetter (Arktis vs. Antarktis)
+# Ausführen aus dem Repo-Root: uv run --directory dbt dbt build
+name: polar
+version: "1.0.0"
+profile: polar
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # Ein Monat zählt nur, wenn mindestens dieser Anteil der Stunden einen
+  # gültigen 2-m-Temperaturwert hat. Begründung siehe README.
+  min_month_coverage: 0.8
+  # Referenzperiode für Anomalien: gemeinsamer Zeitraum aller drei Stationen
+  # (Summit misst erst ab Mitte 2008, 2026 ist noch nicht abgeschlossen).
+  reference_start_year: 2009
+  reference_end_year: 2025
+
+models:
+  polar:
+    staging:
+      +schema: staging
+      +materialized: table
+    marts:
+      +schema: marts
+      +materialized: table
+
+seeds:
+  polar:
+    +schema: raw

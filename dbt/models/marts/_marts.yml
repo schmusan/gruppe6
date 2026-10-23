@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_monthly_temp
+    description: Monatsmittel 2-m-Temperatur mit Datenabdeckung (Grain Station × Monat).
+    columns:
+      - name: coverage
+        description: Anteil der Stunden mit gültigem Temperaturwert (0–1).
+        tests: [not_null]
+      - name: station_name
+        description: Aus dem Seed stations. NULL hiesse, eine Station fehlt im Seed.
+        tests: [not_null]
+
+  - name: mart_annual_temp
+    description: Jahresmittel und Anomalie (Grain Station × Jahr).
+    columns:
+      - name: t2m_annual_c
+        description: Mittel der 12 Monatsmittel, nur für vollständige Jahre.
+      - name: t2m_anomaly_c
+        description: Abweichung vom Mittel der Referenzperiode (dbt_project.yml).
+
+  - name: mart_seasonal_temp
+    description: Saisonmittel nach Hemisphäre korrekt benannt (Grain Station × Saison × Jahr).
+    columns:
+      - name: season_name
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Winter', 'Frühling', 'Sommer', 'Herbst']
