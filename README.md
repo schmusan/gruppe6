@@ -17,6 +17,10 @@ Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6-polar/t
 
 Die Rohdaten sind öffentlich: NOAA Global Monitoring Laboratory, Meteorologie-Messungen der Observatorien Utqiaġvik (BRW), Summit (SUM) und Südpol (SPO), heruntergeladen am 23.10.2026 von https://gml.noaa.gov/aftp/data/meteorology/in-situ/.
 
+## Einsatz von KI
+
+Für Inhalt und Gestaltung haben wir Claude Opus 5.5 (Anthropic) verwendet.
+
 ## Schnellstart
 
 Voraussetzung: [uv](https://docs.astral.sh/uv/) ist installiert.
