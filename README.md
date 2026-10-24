@@ -12,7 +12,7 @@ Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6-polar/t
 | --- | --- |
 | Kommentierter Code | `ingest/` (Ingestion, Parquet, Benchmark), `dbt/` (Transformation und Tests), `notebooks/02_trends_hypothesen.py` (Analyse) |
 | Daten | `data/raw/noaa/` (124 NOAA-Rohdateien, 73 MB, mit Manifest), `data/parquet/` (Parquet pro Station) |
-| Präsentation | `praesentation/` (Folien als PDF, Moderationskarten) |
+| Präsentation | `praesentation/` (Folien als PDF und PPTX) |
 | Storage-Evaluation | `docs/storage_evaluation.md` |
 
 Die Rohdaten sind öffentlich: NOAA Global Monitoring Laboratory, Meteorologie-Messungen der Observatorien Utqiaġvik (BRW), Summit (SUM) und Südpol (SPO), heruntergeladen am 23.10.2026 von https://gml.noaa.gov/aftp/data/meteorology/in-situ/.
@@ -38,7 +38,7 @@ Die Parquet-Dateien liegen im Repo. Wer nur die Transformation braucht, kann dir
 | Storage | Rohtext unverändert, dazu Parquet (zstd, partitioniert nach Station), Analyse in DuckDB | `ingest/to_parquet.py`, `docs/storage_evaluation.md` |
 | Transformation | Fehlcodes → NULL, Plausibilität, Duplikate, Datenabdeckung, Monats-, Jahres- und Saisonmittel, Anomalien, 19 dbt-Tests | `dbt/models/` |
 | Analyse | Trends und Hypothesentests H1–H3 | `notebooks/02_trends_hypothesen.py` |
-| Serving | Teil 2: Klima-Dashboard oder Prognose | folgt |
+| Serving | Teil 2: interaktives Dashboard mit Trends pro Station und Jahreszeit | folgt |
 
 ```
 data/raw/noaa/{site}/      NOAA-Rohtext (versioniert, ca. 73 MB), Manifest in data/raw/noaa/_manifest.csv
