@@ -4,6 +4,19 @@ Projektarbeit Data Engineering HS26, ZHAW SML, **Gruppe 6**: Basil Härri, Sandr
 
 Wir vergleichen die Temperaturentwicklung an drei Observatorien der NOAA. Utqiaġvik (Alaska) und Summit (Grönland) liegen in der Arktis, der Südpol in der Antarktis. Grundlage sind stündliche Messwerte seit den 1970er-Jahren.
 
+## Abgabe Projektarbeit Teil 1 (LN1)
+
+Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6-polar/tree/abgabe). Er bleibt nach dem 27.10.2026 unverändert, weitergearbeitet wird auf `main`.
+
+| Bestandteil | Ort |
+| --- | --- |
+| Kommentierter Code | `ingest/` (Ingestion, Parquet, Benchmark), `dbt/` (Transformation und Tests), `notebooks/02_trends_hypothesen.py` (Analyse) |
+| Daten | `data/raw/noaa/` (124 NOAA-Rohdateien, 73 MB, mit Manifest), `data/parquet/` (Parquet pro Station) |
+| Präsentation | `praesentation/` (Folien als PDF, Moderationskarten) |
+| Storage-Evaluation | `docs/storage_evaluation.md` |
+
+Die Rohdaten sind öffentlich: NOAA Global Monitoring Laboratory, Meteorologie-Messungen der Observatorien Utqiaġvik (BRW), Summit (SUM) und Südpol (SPO), heruntergeladen am 23.10.2026 von https://gml.noaa.gov/aftp/data/meteorology/in-situ/.
+
 ## Schnellstart
 
 Voraussetzung: [uv](https://docs.astral.sh/uv/) ist installiert.
@@ -28,7 +41,7 @@ Die Parquet-Dateien liegen im Repo. Wer nur die Transformation braucht, kann dir
 | Serving | Teil 2: Klima-Dashboard oder Prognose | folgt |
 
 ```
-data/raw/noaa/{site}/      NOAA-Rohtext (nicht versioniert, ca. 75 MB) + _manifest.csv
+data/raw/noaa/{site}/      NOAA-Rohtext (versioniert, ca. 73 MB), Manifest in data/raw/noaa/_manifest.csv
 data/parquet/noaa_hourly/  Parquet pro Station (versioniert, ca. 7 MB)
 polar.duckdb               DuckDB-Datenbank, wird von dbt erzeugt (nicht versioniert)
   raw.stations             Seed: Stammdaten der Stationen
