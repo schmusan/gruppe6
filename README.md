@@ -6,7 +6,7 @@ Wir vergleichen die Temperaturentwicklung an drei Observatorien der NOAA. Utqia�
 
 ## Abgabe Projektarbeit Teil 1 (LN1)
 
-Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6-polar/tree/abgabe). Er bleibt nach dem 27.10.2026 unverändert, weitergearbeitet wird auf `main`.
+Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6/tree/abgabe). Er bleibt nach dem 27.10.2026 unverändert, weitergearbeitet wird auf `main`.
 
 | Bestandteil | Ort |
 | --- | --- |
