@@ -134,7 +134,7 @@ als der Sommer (p = 0.044).
 
 
 
-Fazit: Die Arktis erwärmt sich deutlich scshneller als der Südpol,
+Fazit: Die Arktis erwärmt sich deutlich schneller als der Südpol,
 
 belegt für Utqiaġvik.
 
@@ -146,5 +146,15 @@ belegt für Utqiaġvik.
 
 Drei Punktstationen in unterschiedlicher Lage stehen nicht für ganze
 
-Pole, deshalb
+Pole, deshalb gilt unser Fazit streng genommen nur für Utqiaġvik.
+
+Lücken in Utqiaġvik verkleinern die Stichprobe. Aufeinanderfolgende
+
+Jahre hängen zusammen; weil die Regression aber unabhängige Jahre
+
+annimmt, sind die p-Werte eher zu optimistisch. Instrumentenwechsel
+
+haben wir nicht korrigiert, deshalb könnten Sprünge in der Messreihe
+
+wie Klimatrends aussehen.
 
