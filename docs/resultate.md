@@ -2,7 +2,7 @@
 
 
 
-*Kanita Willner Â· DatenqualitÃ¤t und Resultate*
+*Kanita Willner · Datenqualität und Resultate*
 
 
 
@@ -10,23 +10,23 @@
 
 
 
-Ohne die Bereinigung wÃ¼rden Fehlcodes wie âˆ’999.9 Â°C als echte
+Ohne die Bereinigung würden Fehlcodes wie −999.9 °C als echte
 
-Temperaturen zÃ¤hlen und die Mittelwerte verzerren. Insgesamt wurden
+Temperaturen zählen und die Mittelwerte verzerren. Insgesamt wurden
 
-66'256 Temperaturstunden leer gesetzt, davon fast 44'000 in UtqiaÄ¡vik.
+66'256 Temperaturstunden leer gesetzt, davon fast 44'000 in Utqiaġvik.
 
 
 
-Beim Wind steht in der NOAA-Dokumentation âˆ’999.9 als Fehlcode, in den
+Beim Wind steht in der NOAA-Dokumentation −999.9 als Fehlcode, in den
 
-Daten aber âˆ’99.9. Wir behandeln deshalb jeden negativen Wind als
+Daten aber −99.9. Wir behandeln deshalb jeden negativen Wind als
 
 fehlend und verlassen uns nicht blind auf die Dokumentation.
 
 
 
-Die DuplikatsprÃ¼fung fand null Treffer; das zeigt, dass die
+Die Duplikatsprüfung fand null Treffer; das zeigt, dass die
 
 NOAA-Daten an dieser Stelle sauber sind.
 
@@ -36,35 +36,35 @@ NOAA-Daten an dieser Stelle sauber sind.
 
 
 
-UtqiaÄ¡vik erwÃ¤rmt sich um +0.95 Â°C pro Jahrzehnt (p < 0.001), damit
+Utqiaġvik erwärmt sich um +0.95 °C pro Jahrzehnt (p < 0.001), damit
 
-ist H1 bestÃ¤tigt.
-
-
-
-Die +0.67 bedeuten, dass sich UtqiaÄ¡vik pro Jahrzehnt um 0.67 Â°C
-
-schneller erwÃ¤rmt als der SÃ¼dpol (p = 0.001). Damit ist H2 fÃ¼r
-
-UtqiaÄ¡vik bestÃ¤tigt.
+ist H1 bestätigt.
 
 
 
-Der Trend am SÃ¼dpol ist klein (+0.24 Â°C pro Jahrzehnt) und die Jahre
+Die +0.67 bedeuten, dass sich Utqiaġvik pro Jahrzehnt um 0.67 °C
+
+schneller erwärmt als der Südpol (p = 0.001). Damit ist H2 für
+
+Utqiaġvik bestätigt.
+
+
+
+Der Trend am Südpol ist klein (+0.24 °C pro Jahrzehnt) und die Jahre
 
 schwanken stark, deshalb ist er nur knapp signifikant. Die Regression
 
 sagt p = 0.045, der robustere Mann-Kendall-Test aber p = 0.079, das
 
-heisst, der strengere Test kann den Trend nicht bestÃ¤tigen. Weil sich
+heisst, der strengere Test kann den Trend nicht bestätigen. Weil sich
 
-die beiden Tests widersprechen, sprechen wir am SÃ¼dpol nur von einem
+die beiden Tests widersprechen, sprechen wir am Südpol nur von einem
 
 schwachen Trend.
 
 
 
-Summit zeigt sogar +1.13 Â°C pro Jahrzehnt, aber mit nur 14 vollen
+Summit zeigt sogar +1.13 °C pro Jahrzehnt, aber mit nur 14 vollen
 
 Jahren ist das Ergebnis statistisch noch nicht belastbar.
 
@@ -74,29 +74,29 @@ Jahren ist das Ergebnis statistisch noch nicht belastbar.
 
 
 
-In UtqiaÄ¡vik erwÃ¤rmen sich alle vier Jahreszeiten. Der Winter steigt
+In Utqiaġvik erwärmen sich alle vier Jahreszeiten. Der Winter steigt
 
-um 0.49 Â°C pro Jahrzehnt stÃ¤rker als der Sommer (p = 0.044), damit
+um 0.49 °C pro Jahrzehnt stärker als der Sommer (p = 0.044), damit
 
-ist H3 bestÃ¤tigt. Ãœberrascht hat uns der Herbst: Er steigt mit
+ist H3 bestätigt. Überrascht hat uns der Herbst: Er steigt mit
 
-+1.60 Â°C pro Jahrzehnt am stÃ¤rksten. Am SÃ¼dpol ist kein Saisontrend
++1.60 °C pro Jahrzehnt am stärksten. Am Südpol ist kein Saisontrend
 
 robust.
 
 
 
-### Warum erwÃ¤rmt sich der Herbst am stÃ¤rksten?
+### Warum erwärmt sich der Herbst am stärksten?
 
 
 
 Im Sommer schmilzt mehr Meereis, und das offene, dunkle Wasser
 
-speichert die SonnenwÃ¤rme. Dadurch friert das Nordpolarmeer im Herbst
+speichert die Sonnenwärme. Dadurch friert das Nordpolarmeer im Herbst
 
-spÃ¤ter zu. Solange das Wasser offen ist, gibt es die gespeicherte
+später zu. Solange das Wasser offen ist, gibt es die gespeicherte
 
-WÃ¤rme an die Luft ab â€“ das erwÃ¤rmt den Herbst.
+Wärme an die Luft ab – das erwärmt den Herbst.
 
 
 
@@ -114,29 +114,29 @@ https://doi.org/10.1029/2010GL044136
 
 
 
-FF1: Die Jahresmittel sind gestiegen â€“ UtqiaÄ¡vik +0.95 Â°C pro
+FF1: Die Jahresmittel sind gestiegen – Utqiaġvik +0.95 °C pro
 
-Jahrzehnt, SÃ¼dpol +0.24, Summit +1.13 (Reihe noch zu kurz).
+Jahrzehnt, Südpol +0.24, Summit +1.13 (Reihe noch zu kurz).
 
 
 
-FF2: Ja, die Arktis erwÃ¤rmt sich schneller: UtqiaÄ¡vik steigt 0.67 Â°C
+FF2: Ja, die Arktis erwärmt sich schneller: Utqiaġvik steigt 0.67 °C
 
-pro Jahrzehnt schneller als der SÃ¼dpol (p = 0.001); fÃ¼r Summit ist
+pro Jahrzehnt schneller als der Südpol (p = 0.001); für Summit ist
 
 die Frage noch offen.
 
 
 
-FF3: Am stÃ¤rksten erwÃ¤rmt sich der Herbst; der Winter steigt stÃ¤rker
+FF3: Am stärksten erwärmt sich der Herbst; der Winter steigt stärker
 
 als der Sommer (p = 0.044).
 
 
 
-Fazit: Die Arktis erwÃ¤rmt sich deutlich schneller als der SÃ¼dpol,
+Fazit: Die Arktis erwärmt sich deutlich scshneller als der Südpol,
 
-belegt fÃ¼r UtqiaÄ¡vik.
+belegt für Utqiaġvik.
 
 
 
@@ -144,18 +144,8 @@ belegt fÃ¼r UtqiaÄ¡vik.
 
 
 
-Drei Punktstationen in unterschiedlicher Lage stehen nicht fÃ¼r ganze
+Drei Punktstationen in unterschiedlicher Lage stehen nicht für ganze
 
-Pole, deshalb gilt unser Fazit streng genommen nur fÃ¼r UtqiaÄ¡vik.
-
-LÃ¼cken in UtqiaÄ¡vik verkleinern die Stichprobe. Aufeinanderfolgende
-
-Jahre hÃ¤ngen zusammen; weil die Regression aber unabhÃ¤ngige Jahre
-
-annimmt, sind die p-Werte eher zu optimistisch. Instrumentenwechsel
-
-haben wir nicht korrigiert, deshalb kÃ¶nnten SprÃ¼nge in der Messreihe
-
-wie Klimatrends aussehen.
+Pole, deshalb
 
 
