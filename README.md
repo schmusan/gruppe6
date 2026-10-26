@@ -13,6 +13,7 @@ Abgegeben wird der Branch [`abgabe`](https://github.com/schmusan/gruppe6/tree/ab
 | Kommentierter Code | `ingest/` (Ingestion, Parquet, Benchmark), `dbt/` (Transformation und Tests), `notebooks/02_trends_hypothesen.py` (Analyse) |
 | Daten | `data/raw/noaa/` (124 NOAA-Rohdateien, 73 MB, mit Manifest), `data/parquet/` (Parquet pro Station) |
 | Präsentation | `praesentation/` (Folien als PDF und PPTX) |
+| Konzept und Resultate in Textform | `docs/konzept.md` (Basil Härri), `docs/resultate.md` (Kanita Willner) |
 | Storage-Evaluation | `docs/storage_evaluation.md` |
 
 Die Rohdaten sind öffentlich: NOAA Global Monitoring Laboratory, Meteorologie-Messungen der Observatorien Utqiaġvik (BRW), Summit (SUM) und Südpol (SPO), heruntergeladen am 23.10.2026 von https://gml.noaa.gov/aftp/data/meteorology/in-situ/.
@@ -84,6 +85,17 @@ polar.duckdb               DuckDB-Datenbank, wird von dbt erzeugt (nicht version
 Der Südpol zeigt +0.24 °C pro Jahrzehnt (OLS p = 0.045). Der robuste Mann-Kendall-Test ist mit p = 0.079 aber nicht signifikant.
 
 **Limitationen:** drei Punktstationen, unterschiedliche Lagen (Küste gegenüber Eisschild), Lücken in Utqiaġvik, Autokorrelation der Jahre (die OLS-p-Werte sind eher zu optimistisch), keine Korrektur möglicher Instrumentenwechsel.
+
+## Quellen
+
+- NOAA Global Monitoring Laboratory. (2026). *Meteorology in-situ data, hourly averages: Utqiaġvik/Barrow (BRW), Summit (SUM), South Pole (SPO)* [Datensatz]. Abgerufen am 23.10.2026 von https://gml.noaa.gov/aftp/data/meteorology/in-situ/
+- Reis, J., & Housley, M. (2022). *Fundamentals of data engineering: Plan and build robust data systems*. O’Reilly Media.
+- Screen, J. A., & Simmonds, I. (2010). Increasing fall-winter energy loss from the Arctic Ocean and its role in Arctic temperature amplification. *Geophysical Research Letters, 37*(16), L16707. https://doi.org/10.1029/2010GL044136
+- Mann, H. B. (1945). Nonparametric tests against trend. *Econometrica, 13*(3), 245–259.
+- Kendall, M. G. (1975). *Rank correlation methods* (4. Aufl.). Charles Griffin.
+- Sen, P. K. (1968). Estimates of the regression coefficient based on Kendall’s tau. *Journal of the American Statistical Association, 63*(324), 1379–1389.
+
+Karten und Grafiken in der Präsentation: eigene Darstellung.
 
 ## Zitierung der Daten
 
